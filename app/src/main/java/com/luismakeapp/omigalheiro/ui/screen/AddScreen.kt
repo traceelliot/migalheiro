@@ -67,10 +67,11 @@ fun scaffoldContentAddScreen(addAccount: (Account) -> (Unit), context: Context){
            mutableStateOf("")
         }
 
-        Text(text = "Montante:", fontSize = 26.sp)
+        Text(text = "Montante:", fontSize = 26.sp, color = Color.Black)
 
         TextField(
             value = value,
+            colors = TextFieldDefaults.textFieldColors(backgroundColor = Color(0xFFFBDEAC), textColor = Color(0xFF924642), cursorColor = Color(0xFF924642), placeholderColor = Color(0xFF924642)),
             onValueChange = {value = it},
             maxLines = 1,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -78,8 +79,8 @@ fun scaffoldContentAddScreen(addAccount: (Account) -> (Unit), context: Context){
                           Text("Numeros com 2 casa decimais (Ex. 23.75)")
             },
             modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 10.dp)
+                .fillMaxWidth()
+                .padding(top = 10.dp)
 
         )
 
